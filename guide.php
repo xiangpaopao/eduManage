@@ -1,21 +1,47 @@
 <?php require_once ('header.php'); ?>
 <div class="container">
-  <div id="guideBar" class="flow-steps-order">
-    <ol class="num5">
-      <li class="done current"> <span class="state">申请入学</span> </li>
-      <li class="done"> <span class="state">基本条件</span> </li>
-      <li class="done"> <span class="state">就业条件</span> </li>
-      <li class="done"> <span class="state">加分条件</span> </li>
-      <li class="done last"> <span class="state">申请结果</span> </li>
-    </ol>
-  </div>
-  <!-- 申请入学 -->
-  <div id="appbox1">
-    <form class="form-horizontal">
-      <fieldset>
-        <div id="legend" class="">
-          <legend class="">申请入学</legend>
-        </div>
+  <form class="form-horizontal">
+    <fieldset>
+      <div id="legend" class="">
+        <legend class="">申请流程</legend>
+      </div>
+      <div id="guideBar" class="flowstep">
+        <ol class="flowstep-5">
+          <li class="step-first">
+            <div class="step-cur">
+              <div class="step-name">申请入学</div>
+              <div class="step-no">1</div>
+            </div>
+          </li>
+          <li>
+            <div class="">
+              <div class="step-name">基本条件</div>
+              <div class="step-no">2</div>
+            </div>
+          </li>
+          <li>
+            <div class="">
+              <div class="step-name">就业条件</div>
+              <div class="step-no">3</div>
+            </div>
+          </li>
+          <li>
+            <div class="">
+              <div class="step-name">加分条件</div>
+              <div class="step-no">4</div>
+            </div>
+          </li>
+          <li class="step-last">
+            <div class="">
+              <div class="step-name">申请结果</div>
+              <div class="step-no">5</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      
+      <!-- 申请入学 -->
+      <div id="appbox1">
         <h4><b>1</b>申请人</h4>
         <div class="control-group">
           <label class="control-label" for="input01">申请人姓名</label>
@@ -148,9 +174,7 @@
         </div>
         <div class="control-group">
           <label class="control-label" for="input01">性别</label>
-          <div class="controls"> 
-            
-            
+          <div class="controls">
             <label class="radio inline">
               <input type="radio" value="1" checked="checked" name="sex">
               男 </label>
@@ -179,185 +203,172 @@
         <div class="form-actions">
           <div id="setp1-next" class="btn btn-warning btn-large">开始申请</div>
         </div>
-      </fieldset>
-    </form>
-  </div>
-  
-  <!-- 基本条件 -->
-  <div id="appbox2" style="display:none">
-    <form class="form-horizontal">
-      <fieldset>
-        <div id="legend" class="">
-          <legend class="">基本条件</legend>
+      </div>
+      
+      <!-- 基本条件 -->
+      <div id="appbox2" style="display:none">
+      <div class="control-group">
+        <label class="control-label">居住证</label>
+        <div class="controls">
+          <input type="text" placeholder="请输入居住证号码" class="input-xlarge">
         </div>
-        <div class="control-group">
-          <label class="control-label">居住证</label>
-          <div class="controls">
-            <input type="text" placeholder="请输入居住证号码" class="input-xlarge">
-          </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">产权房</label>
+        <div class="controls">
+          <select id="house" class="input-xlarge">
+            <option value="0">有产权房</option>
+            <option value="1">无产权房但有合法租赁协议</option>
+            <option value="2">无产权房且无合法租赁协议</option>
+          </select>
         </div>
-        <div class="control-group">
-          <label class="control-label" for="input01">产权房</label>
-          <div class="controls">
-            <select id="house" class="input-xlarge">
-              <option value="0">有产权房</option>
-              <option value="1">无产权房但有合法租赁协议</option>
-              <option value="2">无产权房且无合法租赁协议</option>
-            </select>
-          </div>
+      </div>
+      <div id="control-house-cq" class="control-group">
+        <label class="control-label" for="input01">产权证</label>
+        <div class="controls">
+          <input type="text" placeholder="请输入产权证号码" class="input-xlarge">
         </div>
-        <div id="control-house-cq" class="control-group">
-          <label class="control-label" for="input01">产权证</label>
-          <div class="controls">
-            <input type="text" placeholder="请输入产权证号码" class="input-xlarge">
-          </div>
+      </div>
+      <div id="control-house-ht" class="control-group" style="display:none">
+        <label class="control-label" for="input01">租赁协议</label>
+        <div class="controls">
+          <input type="text" placeholder="输入租赁协议号码" class="input-xlarge">
         </div>
-        <div id="control-house-ht" class="control-group" style="display:none">
-          <label class="control-label" for="input01">租赁协议</label>
-          <div class="controls">
-            <input type="text" placeholder="输入租赁协议号码" class="input-xlarge">
-          </div>
-        </div>
-        <div class="form-actions">
-          <div id="setp2-prev" class="btn btn-large">上一步</div>
-          <div id="setp2-next" class="btn btn-warning btn-large">下一步</div>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-  
-  <!-- 就业条件 -->
-  <div id="appbox3" style="display:none">
-    <form class="form-horizontal">
-      <fieldset>
-        <div id="legend" class="">
-          <legend class="">就业条件</legend>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="input01">就业情况</label>
-          <div class="controls">
-            <select id="work" class="input-xlarge">
-              <option value="0">有社保缴费记录</option>
-              <option value="1">无社保缴费记录但办理了灵活就业登记</option>
-              <option value="2">未办理灵活就业登记但在奉贤连续工作满一年</option>
-              <option value="3">未办理灵活就业登记且在奉贤连续工作未满一年</option>
-            </select>
-          </div>
-        </div>
-        <div id="control-work-1" class="control-group">
-          <label class="control-label" for="input01">社保账号</label>
-          <div class="controls">
-            <input type="text" placeholder="请输入社保账号" class="input-xlarge">
-          </div>
-        </div>
-        <div id="control-work-2" class="control-group" style="display:none">
-          <label class="control-label" for="input01">灵活就业登记号码</label>
-          <div class="controls">
-            <input type="text" placeholder="请输入灵活就业登记号码" class="input-xlarge">
-          </div>
-        </div>
-        <div id="control-work-3" class="control-group" style="display:none">
-          <label class="control-label" for="input01">证明号码</label>
-          <div class="controls">
-            <input type="text" placeholder="输入证明号码" class="input-xlarge">
-          </div>
-        </div>
-        <div class="form-actions">
-          <div id="setp3-prev" class="btn btn-large">上一步</div>
-          <div id="setp3-next" class="btn btn-warning btn-large">下一步</div>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-  
-  <!-- 加分条件 -->
-  <div id="appbox4" style="display:none">
-    <form class="form-horizontal">
-      <fieldset>
-        <div id="legend" class="">
-          <legend class="">加分条件</legend>
-        </div>
-        <div class="control-group">
-          <label class="control-label">学历或者职称</label>
-          <div class="controls">
-            <select class="input-xlarge">
-              <option value="0">大学本科及以上学历</option>
-              <option value="1">高级技术职称</option>
-              <option value="2">大学专科学历</option>
-              <option value="3">中级技术职称</option>
-              <option value="4">初级技术职称</option>
-            </select>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="input01">学历证明</label>
-          <div class="controls">
-            <input type="text" placeholder="请输入学历证明编号" class="input-xlarge">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label">表彰奖励</label>
-          <div class="controls">
-            <select id="award" class="input-xlarge">
-              <option value="0">暂无表彰奖励</option>
-              <option value="1">国家表彰奖励</option>
-              <option value="2">上海市表彰奖励</option>
-              <option value="3">奉贤区区级表彰</option>
-              <option value="4">区内相关部门表彰</option>
-            </select>
-          </div>
-        </div>
-        <div id="control-award-id" class="control-group" style="display:none"><label class="control-label" for="input01">奖励编号</label>
-          <div class="controls">
-            <input type="text" placeholder="请输入奖励编号" class="input-xlarge">
-          </div>
-        </div>
-        
-        <div id="control-award-pic" class="control-group" style="display:none">
-          <label class="control-label">上传证书图片</label>
+      </div>
+      <div class="form-actions">
+        <div id="setp2-prev" class="btn btn-large">上一步</div>
+        <div id="setp2-next" class="btn btn-warning btn-large">下一步</div>
+      </div>
+</div>
 
-          <!-- File Upload -->
-          <div class="controls">
-            <input class="input-file" id="fileInput" type="file">
-          </div>
-        </div>
- 
-        <div class="form-actions">
-          <div id="setp4-prev" class="btn btn-large">上一步</div>
-          <a id="setp4-next" href="result.php" class="btn btn-warning btn-large">提交申请</a>
-        </div>
-      </fieldset>
-    </form>
-  </div>
+<!-- 就业条件 -->
+<div id="appbox3" style="display:none">
+    <div class="control-group">
+      <label class="control-label" for="input01">就业情况</label>
+      <div class="controls">
+        <select id="work" class="input-xlarge">
+          <option value="0">有社保缴费记录</option>
+          <option value="1">无社保缴费记录但办理了灵活就业登记</option>
+          <option value="2">未办理灵活就业登记但在奉贤连续工作满一年</option>
+          <option value="3">未办理灵活就业登记且在奉贤连续工作未满一年</option>
+        </select>
+      </div>
+    </div>
+    <div id="control-work-1" class="control-group">
+      <label class="control-label" for="input01">社保账号</label>
+      <div class="controls">
+        <input type="text" placeholder="请输入社保账号" class="input-xlarge">
+      </div>
+    </div>
+    <div id="control-work-2" class="control-group" style="display:none">
+      <label class="control-label" for="input01">灵活就业登记号码</label>
+      <div class="controls">
+        <input type="text" placeholder="请输入灵活就业登记号码" class="input-xlarge">
+      </div>
+    </div>
+    <div id="control-work-3" class="control-group" style="display:none">
+      <label class="control-label" for="input01">证明号码</label>
+      <div class="controls">
+        <input type="text" placeholder="输入证明号码" class="input-xlarge">
+      </div>
+    </div>
+    <div class="form-actions">
+      <div id="setp3-prev" class="btn btn-large">上一步</div>
+      <div id="setp3-next" class="btn btn-warning btn-large">下一步</div>
+    </div>
+    </div>
+    
+    <!-- 加分条件 -->
+    <div id="appbox4" style="display:none">
+    <div class="control-group">
+      <label class="control-label">学历或者职称</label>
+      <div class="controls">
+        <select class="input-xlarge">
+          <option value="0">大学本科及以上学历</option>
+          <option value="1">高级技术职称</option>
+          <option value="2">大学专科学历</option>
+          <option value="3">中级技术职称</option>
+          <option value="4">初级技术职称</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input01">学历证明</label>
+      <div class="controls">
+        <input type="text" placeholder="请输入学历证明编号" class="input-xlarge">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">表彰奖励</label>
+      <div class="controls">
+        <select id="award" class="input-xlarge">
+          <option value="0">暂无表彰奖励</option>
+          <option value="1">国家表彰奖励</option>
+          <option value="2">上海市表彰奖励</option>
+          <option value="3">奉贤区区级表彰</option>
+          <option value="4">区内相关部门表彰</option>
+        </select>
+      </div>
+    </div>
+    <div id="control-award-id" class="control-group" style="display:none">
+      <label class="control-label" for="input01">奖励编号</label>
+      <div class="controls">
+        <input type="text" placeholder="请输入奖励编号" class="input-xlarge">
+      </div>
+    </div>
+    <div id="control-award-pic" class="control-group" style="display:none">
+      <label class="control-label">上传证书图片</label>
+      
+      <!-- File Upload -->
+      <div class="controls">
+        <input class="input-file" id="fileInput" type="file">
+      </div>
+    </div>
+    <div class="form-actions">
+      <div id="setp4-prev" class="btn btn-large">上一步</div>
+      <a id="setp4-next" href="result.php" class="btn btn-warning btn-large">提交申请</a> </div>
+  </fieldset>
+</form>
+</div>
 </div>
 <script>
 $(document).ready(function(e) {
 	var $allBox = $('#appbox1,#appbox2,#appbox3,#appbox4');
-	var $done = $('.done');
+	var $setp = $('#guideBar ol li').children('div');
 	
 	$('#setp2-prev').click(function(){
 			$allBox.hide();
-			$done.removeClass('current');
+			$setp.eq(0).removeClass('step-done');
+			$setp.eq(0).addClass('step-cur');
+			$setp.eq(1).removeClass('step-cur');
 			$('#appbox1').show();
-			$done.eq(0).addClass('current');
 	});
 	$('#setp1-next,#setp3-prev').click(function(){
 			$allBox.hide();
-			$done.removeClass('current');
+			$setp.eq(0).removeClass('step-cur');
+			$setp.eq(0).addClass('step-done');
+			$setp.eq(1).addClass('step-cur');
+			$setp.eq(1).removeClass('step-done');
+			$setp.eq(2).removeClass('step-cur');
 			$('#appbox2').show();
-			$done.eq(1).addClass('current');
 	});
 	$('#setp2-next,#setp4-prev').click(function(){
 			$allBox.hide();
-			$done.removeClass('current');
+			$setp.eq(1).removeClass('step-cur');
+			$setp.eq(1).addClass('step-done');
+			$setp.eq(2).addClass('step-cur');
+			$setp.eq(2).removeClass('step-done');
+			$setp.eq(3).removeClass('step-cur');
 			$('#appbox3').show();
-			$done.eq(2).addClass('current');
 	});
 	$('#setp3-next').click(function(){
 			$allBox.hide();
-			$done.removeClass('current');
+			$setp.eq(2).removeClass('step-cur');
+			$setp.eq(2).addClass('step-done');
+			$setp.eq(3).addClass('step-cur');
+			$setp.eq(3).removeClass('step-done');
+			$setp.eq(4).removeClass('step-cur');
 			$('#appbox4').show();
-			$done.eq(3).addClass('current');
 	});
 	
 	

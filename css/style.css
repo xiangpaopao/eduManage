@@ -49,18 +49,25 @@ body{font: 14px/1.6 Verdana, Helvetica, sans-serif;}
 #appbox1 #myTab{ margin:10px 22px 20px 22px;}
 #appbox1 #myTab .active a{ background:#f88d0f;}
 .form-horizontal .form-actions {padding-left: 202px;}
-#guideBar{	margin-top:40px}
-.flow-steps-order {width: 100%;margin-bottom: 15px}
-.flow-steps-order ol {height: 40px;background: url(../img/barbg.png) repeat-x;margin:0}
-.flow-steps-order .num5 li {width: 20%}
-.flow-steps-order .done {color: rgb(0, 0, 0)}
-.flow-steps-order li {display: inline;float: left;text-align: centerfont-size: 14px;background: url(../img/arrow.png) no-repeat 100% 1px;color: rgb(128, 128, 128)}
-.flow-steps-order .done .state {font-weight: 700}
-.flow-steps-order .state {height: 36px;line-height: 36px}
-.flow-steps-order span {display: block}
-.flow-steps-order li {text-align: center;font-size: 14px;color: rgb(128, 128, 128)}
-.flow-steps-order .last {background-image: none}
-.flow-steps-order .current .state {width: 161px;height: 40px;margin: -1px auto 0;background:url(../img/baractive.png) no-repeat;color: rgb(255, 255, 255)}
+#guideBar{margin:26px 0 20px 0; padding-bottom:45px;border-bottom: 1px solid #E5E5E5;}
+.flowstep {margin: 12px auto 10px;padding: 0;}
+.flowstep {width: 940px;margin: 0 auto;padding: 20px 0;}
+.flowstep ol {overflow: hidden;zoom: 1;}
+.flowstep-5 {margin-left: -42px;width: 1025px;}
+.flowstep-5 li {width: 205px;}
+.flowstep li {float: left;text-align: center;}
+.flowstep .step-first .step-done .step-no {background-position: 50% -204px;}
+.flowstep .step-done .step-no {background-position: 50% -170px; text-indent:-1000em}
+.flowstep .step-no {height: 34px;line-height: 34px;font-family: 'arial black';color: #FFF;font-size: 18px;}
+.flowstep .step-no, .flowstep .step-sub-box .step-sub {background: url(../img/guidebar.png?2) no-repeat 50% -102px;}
+.flowstep .step-cur .step-name {color: #f88d0f;}
+.flowstep .step-cur .step-no {background-position: 50% 0;}
+.flowstep .step-first .step-cur .step-no {background-position: 50% -34px;}
+.flowstep .step-last .step-no {background-position: 50% -136px;}
+.flowstep .step-last .step-cur .step-no {background-position: 50% -68px;}
+.flowstep .step-name{margin-bottom:8px;font-weight: 600; font-size:14px}
+.form-horizontal {margin-top:30px;}
+
 
 /* result */
 #resultBody{background:url(../img/result.jpg) repeat-x  bottom center; height:580px}
@@ -75,5 +82,9 @@ body{font: 14px/1.6 Verdana, Helvetica, sans-serif;}
 #adminBody{margin-top:30px;}
 #adminBody table select{ margin:0}
 #adminBody table td{ line-height:30px}
-
-
+#appendedInputButton{text-align:center; width:30px}
+#adminTopBar{margin-bottom:20px; line-height:24px}
+#adminTopBar .input-append{ margin:0}
+#adminTopBar em{ font-size:18px; color:#f88d0f}
+#adminBody input[type="checkbox"] {margin:-2px 4px 0 0;}
+#adminBody .breadcrumb li{padding:0 10px 0 0}
