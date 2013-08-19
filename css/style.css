@@ -1,0 +1,79 @@
+@charset "UTF-8";/* CSS Document */
+
+/* reset */
+*{margin:0;padding:0;list-style-type:none;}
+a{blr:expression(this.onFocus=this.blur())}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+:focus{outline:0;}
+label{cursor:pointer;}
+img{vertical-align:middle;}
+table{empty-cells:show;border-collapse:collapse;border-spacing:0;}
+
+/*common*/
+body,html{margin:0;padding:0;height:100%}
+body{font: 14px/1.6 Verdana, Helvetica, sans-serif;}
+.tc{text-align:center;}
+.fl{float:left;}
+.fr{float:right;}
+#top{height:131px;background: url(../img/top-bg.png) repeat-x center bottom;}
+#topCon{}
+#topWapper{height:86px;background: url(../img/top-shap.png) no-repeat center top; margin:0 auto;}
+#logo{width:178px;height:57px;background:url(../img/logo.png) no-repeat;margin: 12px 0 15px 0; display:block}
+#loginForm .controls{height:35px;}
+#loginForm {color:#fff;}
+.article_info{color:#999;border-bottom:1px solid #ccc; padding:5px 0; margin:0 0 25px 0}
+#mainNav li{float:left;padding:0 16px;}
+#mainNav li a{font-weight: bold;padding: .8em .3em;color: #454545;text-shadow: 0 1px 0 #fff;-moz-text-shadow: 0 1px 0 #fff;-webkit-text-shadow: 0 1px 0 #fff;border-bottom: 0;}
+#mainNav li a:hover {color: #fe850c;background:none;}
+#myModal{ width:400px; font-size:14px;margin-left: -200px;}
+#footer{background:#4e4e4e;color:#ccc;text-align:center;width:100%;height:90px;padding:40px 0;font-size:12px;margin:30px 0 0 0;}
+#footer a,#footer a:hover{color:#ccc;}
+.picBox img{border: 8px solid #fff;box-shadow: 0px 7px 4px rgba(41, 37, 27, 0.09);}
+.picBox img:hover{border: 8px solid #f0bb05;-webkit-transition: all 0.5s ease}
+.xin{color:#fe850c; margin-right:0.5em}
+.styleLine{color: #fea44c;text-shadow: 0 1px 1px #af5b0a; padding:0 10px;}
+.container{min-height:500px;}
+.header{width: 100%;height: 86px;background: #f77900 url(../img/top-shap.png) no-repeat center top;margin: 0 0 0 0}
+.header h3{	padding-top:6px;margin:0 auto;color:#fff;width:940px;font-weight:normal}
+.header h3 a{color:#fff}
+
+/* index */
+#loginModal{ width:400px; margin-left:-200px}
+#indexBox{height:371px; width:780px;background:url(../img/indexpic.jpg?2) no-repeat top center; padding:120px 80px;}
+#indexBody{background:url(../img/indexbg.jpg) repeat-x top center;}
+
+
+/* guide */
+.control-group{margin:0 22px 0 22px;}
+#appbox1 h4{font-size:16px; font-weight:normal; line-height:24px; margin:0 22px 14px 22px; border-bottom:1px #dedede dashed; padding-bottom:8px;}
+#appbox1 h4 b{width:24px; height:24px;border-radius:24px; -webkit-border-radius:24px; background:#ff5700; text-align:center; color:#fff; display:inline-block; font-weight:normal; font-size:18px; margin-right:8px;}
+#appbox1 #myTab{ margin:10px 22px 20px 22px;}
+#appbox1 #myTab .active a{ background:#f88d0f;}
+.form-horizontal .form-actions {padding-left: 202px;}
+#guideBar{	margin-top:40px}
+.flow-steps-order {width: 100%;margin-bottom: 15px}
+.flow-steps-order ol {height: 40px;background: url(../img/barbg.png) repeat-x;margin:0}
+.flow-steps-order .num5 li {width: 20%}
+.flow-steps-order .done {color: rgb(0, 0, 0)}
+.flow-steps-order li {display: inline;float: left;text-align: centerfont-size: 14px;background: url(../img/arrow.png) no-repeat 100% 1px;color: rgb(128, 128, 128)}
+.flow-steps-order .done .state {font-weight: 700}
+.flow-steps-order .state {height: 36px;line-height: 36px}
+.flow-steps-order span {display: block}
+.flow-steps-order li {text-align: center;font-size: 14px;color: rgb(128, 128, 128)}
+.flow-steps-order .last {background-image: none}
+.flow-steps-order .current .state {width: 161px;height: 40px;margin: -1px auto 0;background:url(../img/baractive.png) no-repeat;color: rgb(255, 255, 255)}
+
+/* result */
+#resultBody{background:url(../img/result.jpg) repeat-x  bottom center; height:580px}
+#resultBody h3{ line-height:48px; text-align:center; margin-top:40px; font-size:34px;}
+#resultBody h3 img{ margin-top:-5px;}
+#resultBody h1 span{ color:#ff5700; font-size:60px;}
+#resultBody h1{ font-weight:normal; text-align:center; margin:40px 0 30px 0;}
+#resultBody h4{ font-weight:normal; text-align:center; line-height:1.8em}
+
+
+/* admin */
+#adminBody{margin-top:30px;}
+#adminBody table select{ margin:0}
+#adminBody table td{ line-height:30px}
+
+
